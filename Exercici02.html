@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="exercici02.js" defer></script>
+    <title>Exercici - Taula, Compte Enrere, Rellotge i Alarma</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Taula de Propietats</h1>
+        <div id="taula_propietats"></div>
+
+        <h2>Compte Enrere</h2>
+        <div id="countdown">
+            <label for="minutes">Minuts:</label>
+            <input type="number" id="minutes" value="0" min="0">
+
+            <label for="seconds">Segons:</label>
+            <input type="number" id="seconds" value="0" min="0" max="59">
+        </div>
+
+        <div id="controls">
+            <button id="startButton">Iniciar</button>
+            <button id="pauseButton">Pausar</button>
+            <button id="resetButton">Restablir</button>
+        </div>
+
+        <h3 id="timerDisplay">00:00</h3>
+
+        <audio id="alarmSound" preload="auto">
+            <source id="alarmSource" src="FANFARE1.WAV" type="audio/wav">
+        </audio>
+
+        <h2>Rellotge i Alarma</h2>
+        <h3 id="currentTime">00:00:00</h3>
+
+        <div id="alarmSettings">
+            <label for="alarmHour">Hora:</label>
+            <input type="number" id="alarmHour" min="0" max="23">
+
+            <label for="alarmMinute">Minut:</label>
+            <input type="number" id="alarmMinute" min="0" max="59">
+
+            <label for="alarmMusic">Selecciona la música:</label>
+            <select id="alarmMusic">
+                <option value="FANFARE1.WAV">Música 1 (FANFARE1)</option>
+                <option value="DRUMC0.WAV">Música 2 (DRUMC0)</option>
+            </select>
+
+            <label for="alarmVolume">Volum:</label>
+            <input type="range" id="alarmVolume" min="0" max="1" step="0.1" value="0.5">
+
+            <button id="setAlarmButton">Establir Alarma</button>
+        </div>
+
+        <div id="alarmControls">
+            <button id="playAlarmButton">Reproduir Alarma</button>
+            <button id="stopAlarmButton">Aturar Alarma</button>
+        </div>
+    </div>
+</body>
+</html>
